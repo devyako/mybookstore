@@ -1,0 +1,22 @@
+.container {
+  position: absolute;
+  top: 70px;
+  left: 250px;
+}
+
+.typing {
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  font-size: 70px;
+  color: #f04b4b;
+  margin-left: 5px;
+}
+
+.title {
+  color: #945814;
+  font-size: 50px;
+  width: 700px;
+}

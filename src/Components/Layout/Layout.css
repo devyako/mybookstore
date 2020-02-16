@@ -1,0 +1,137 @@
+.background {
+  text-align: center;
+  background-image: url(../../assets/background2.png);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  overflow: hidden;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.intro {
+  display: flex;
+  font-size: 16px;
+  animation: 2s ease;
+}
+
+.store-btn-div {
+  position: absolute;
+  bottom: 20px;
+  left: 0px;
+  right: 0px;
+}
+
+.store-btn {
+  width: 200px;
+  height: 79px;
+
+  background: #ffd662;
+  border: 9px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 45px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #a02828;
+  transition: 0.6s ease;
+}
+
+.store-btn:hover {
+  background-color: white;
+  color: #b91212;
+  border: 15px solid white;
+  transition: 0.6s ease;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 100%;
+  border-top-left-radius: 100%;
+}
+
+.login-btn {
+  position: absolute;
+  right: 0px;
+  padding: 10px;
+  z-index: 500;
+}
+
+.login-btn button {
+  margin-left: 5px;
+  padding: 10px;
+  background-color: #e76fb3;
+  border: 1px solid rgb(255, 255, 255);
+  font-size: 13px;
+  cursor: pointer;
+  color: white;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition: 0.3s ease;
+}
+
+.login-btn button:hover {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  transition: 0.3s ease;
+}
+
+.Backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.login-container {
+  position: absolute;
+  top: 170px;
+  left: 400px;
+}
+
+.girl {
+  position: absolute;
+  bottom: 40px;
+  right: 0px;
+
+  width: 472px;
+  height: 600px;
+  z-index: 100;
+}
+img {
+  width: 80%;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+img.vert-move {
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
+}
+img.vert-move {
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
+}
+
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
