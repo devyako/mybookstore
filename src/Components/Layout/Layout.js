@@ -35,7 +35,7 @@ class Layout extends React.Component {
 
         <div className="login-btn">
           <button onClick={() => this.setState({ show: true })}>Log IN</button>
-          <button>Sign Up</button>
+          <button>Sign Up Now</button>
         </div>
 
         <div className="girl">
