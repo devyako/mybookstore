@@ -52,8 +52,6 @@ class Layout extends React.Component {
           <button onClick={() => this.setState({ showSignUp: true })}>
             Sign Up
           </button>
-          <button onClick={() => this.setState({ show: true })}>Log IN</button>
-          <button>Sign Up</button>
         </div>
 
         <div className="girl">
