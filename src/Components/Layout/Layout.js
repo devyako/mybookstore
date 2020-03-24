@@ -1,23 +1,27 @@
 import React from "react";
 import "./Layout.css";
 import Girl from "../../assets/drawing.svg";
-import Login from "./Login";
+import Login from "../Login";
 import TypingComponent from "../../UI/Typing/Typing";
 import Navigation from "../../UI/Navigation";
+import SignUp from "../SignUp";
+import About from "../About";
 
 class Layout extends React.Component {
   state = {
-    show: false
+    showLogin: false,
+    showSignUp: false,
+    showAbout: false
   };
 
   backdropOff = () => {
-    this.setState({ show: false });
+    this.setState({ showLogin: false, showSignUp: false, showAbout: false });
   };
 
   render() {
     return (
       <div className="background">
-        <Navigation />
+        <Navigation aboutClicked={() => this.setState({ showAbout: true })} />
 
         <div className="flex-container">
           <div className="typing">
@@ -30,12 +34,24 @@ class Layout extends React.Component {
         </div>
 
         <div className="login-container">
-          {this.state.show ? <Login clicked={this.backdropOff} /> : null}
+          {this.state.showLogin ? <Login clicked={this.backdropOff} /> : null}
+        </div>
+
+        <div className="login-container">
+          {this.state.showSignUp ? <SignUp clicked={this.backdropOff} /> : null}
+        </div>
+
+        <div className="login-container">
+          {this.state.showAbout ? <About clicked={this.backdropOff} /> : null}
         </div>
 
         <div className="login-btn">
-          <button onClick={() => this.setState({ show: true })}>Log IN</button>
-          <button>Sign Up</button>
+          <button onClick={() => this.setState({ showLogin: true })}>
+            Log IN
+          </button>
+          <button onClick={() => this.setState({ showSignUp: true })}>
+            Sign Up
+          </button>
         </div>
 
         <div className="girl">

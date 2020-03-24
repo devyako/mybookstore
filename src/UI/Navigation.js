@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const navigation = () => {
+const navigation = props => {
   return (
     <NAVIGATION>
       <BUTTON>Blog</BUTTON>
-      <BUTTON>About</BUTTON>
+      <BUTTON onClick={props.aboutClicked}>About</BUTTON>
     </NAVIGATION>
   );
 };
@@ -16,6 +16,7 @@ const NAVIGATION = styled.div`
   position: absolute;
   padding: 10px;
   display: flex;
+  font-family: "Raleway", sans-serif;
 `;
 
 const BUTTON = styled.div`

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import loginPic from "../../assets/login.png";
-import Aux from "../../UI/Auxiliary";
+import loginPic from "../assets/login.png";
+import Aux from "../UI/Auxiliary";
 
 class Login extends Component {
   render() {
@@ -9,18 +9,16 @@ class Login extends Component {
       <Aux>
         <Backdrop onClick={this.props.clicked}></Backdrop>
         <LoginDiv>
-          <div className="mail">E-mail</div>
-          <input type="text" />
-          <div className="mail">Password</div>
-          <input type="text" />
+          <div onClick={this.props.clicked} className="closer">
+            x
+          </div>
+          <br />
+          <br />
+          <input type="text" placeholder="E-mail" />
+          <br />
+          <input type="text" placeholder="Password" />
           <div className="submit">
             <button>Submit</button>
-          </div>
-          <hr style={{ width: "100px" }} />
-          <div className="social">Log in with Socail Media</div>
-          <div className="social-networks">
-            <div className="facebook">Facebook</div>
-            <div className="google">Google</div>
           </div>
         </LoginDiv>
       </Aux>
@@ -41,17 +39,28 @@ const Backdrop = styled.div`
 `;
 
 const LoginDiv = styled.div`
+  font-family: "Raleway", sans-serif;
   position: fixed;
   background-image: url(${loginPic});
-  width: 400px;
+  width: 550px;
   z-index: 300;
-  height: 300px;
+  height: 550px;
   text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
   overflow: hidden;
-  padding: 20px;
+  padding: 25px;
+
+  .closer {
+    background-color: white;
+    opacity: 0.6;
+    left: 0;
+    top: 0;
+    width: 15px;
+    cursor: pointer;
+    border: 1px solid grey;
+  }
 
   .mail {
     position: center bottom;
@@ -68,7 +77,9 @@ const LoginDiv = styled.div`
   input {
     padding: 5px;
     border: 1px solid #aaaaaa;
-    border-radius: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: 200px;
   }
   .submit {
     padding: 5px;

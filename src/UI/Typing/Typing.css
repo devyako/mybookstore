@@ -20,3 +20,13 @@
   font-size: 50px;
   width: 700px;
 }
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    left: 0;
+  }
+
+  .title {
+    width: 100%;
+  }
+}

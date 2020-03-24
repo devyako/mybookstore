@@ -1,13 +1,14 @@
 import React from "react";
 import "./App.css";
 import Layout from "./Components/Layout/Layout";
-import Books from "./Components/Books/Books";
-
+import BillRecomendations from "./Components/Recomendations/BillRecomendations";
+import ElonRecomendations from "./Components/Recomendations/ElonRecomendations";
 function App() {
   return (
     <div className="App">
       <Layout />
-      <Books />
+      <BillRecomendations />
+      <ElonRecomendations />
     </div>
   );
 }

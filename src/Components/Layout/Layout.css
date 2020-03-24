@@ -30,7 +30,6 @@
 .store-btn {
   width: 200px;
   height: 79px;
-
   background: #ffd662;
   border: 9px solid #ffffff;
   box-sizing: border-box;
@@ -39,6 +38,8 @@
   cursor: pointer;
   color: #a02828;
   transition: 0.6s ease;
+
+  font-family: "Raleway", sans-serif;
 }
 
 .store-btn:hover {
@@ -56,11 +57,14 @@
   position: absolute;
   right: 0px;
   padding: 10px;
-  z-index: 500;
+  z-index: 190;
+  font-family: "Raleway", sans-serif;
 }
 
 .login-btn button {
   margin-left: 5px;
+
+  font-family: "Raleway", sans-serif;
   padding: 10px;
   background-color: #e76fb3;
   border: 1px solid rgb(255, 255, 255);
@@ -91,22 +95,20 @@
 }
 
 .login-container {
-  position: absolute;
-  top: 170px;
-  left: 400px;
+  display: flex;
+  justify-content: center;
 }
 
 .girl {
   position: absolute;
-  bottom: 40px;
+  bottom: 0px;
   right: 0px;
-
-  width: 472px;
-  height: 600px;
+  width: 40%;
   z-index: 100;
 }
-img {
-  width: 80%;
+
+img.vert-move {
+  width: 70%;
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -133,5 +135,11 @@ img.vert-move {
   }
   100% {
     transform: translateY(-15px);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .girl {
+    display: none;
   }
 }

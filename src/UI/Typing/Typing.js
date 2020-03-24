@@ -14,7 +14,7 @@ class TypingComponent extends React.Component {
           text={[
             "Books for future!",
             "Books for Progress!",
-            "Books for Wider Mindset!"
+            "Books for Mindset!"
           ]}
         />
 
