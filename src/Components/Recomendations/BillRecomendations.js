@@ -89,7 +89,7 @@ const Container = styled.div`
   }
   .recommendations {
     padding: 20px;
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: center;
