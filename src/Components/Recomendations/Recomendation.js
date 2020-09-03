@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import WhySleep from "../../books/why-sleep.pdf";
 
 const recommendation = (props) => {
   return (
@@ -7,8 +8,10 @@ const recommendation = (props) => {
       <div className="txt-img">
         <img src={props.img} />
         <div className="buttons">
-          <button>Download</button>
-          <button className="amazon">Amazon</button>
+          <a className="download" href={WhySleep} download>
+            Download
+          </a>
+          <a className="amazon">Amazon</a>
         </div>
       </div>
     </Container>
@@ -30,7 +33,7 @@ const Container = styled.div`
     margin-bottom: 10px;
     box-sizing: border-box;
     box-shadow: 0px 0px 10px 5px rgba(112, 112, 112, 0.25);
-    
+
     transition: 0.4s;
     :hover {
       transition: 0.3s;
@@ -46,14 +49,15 @@ const Container = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 
-    button {
+    .download {
+      padding: 5px;
+      text-decoration: none;
       font-family: "Raleway", sans-serif;
-      cursor: pointer;
       background: linear-gradient(90deg, #ef9d23 -0.77%, #f05959 97.68%);
       border-radius: 4px;
       border: transparent;
-      padding: 10px;
       color: white;
       transition: 0.5s ease;
       box-sizing: border-box;
@@ -65,11 +69,11 @@ const Container = styled.div`
       }
     }
     .amazon {
+      padding: 5px;
       cursor: pointer;
       background: linear-gradient(90deg, #f05959 -0.77%, #ef9d23 97.68%);
       border-radius: 4px;
       border: transparent;
-      padding: 10px;
       color: white;
       transition: 0.5s ease;
 
