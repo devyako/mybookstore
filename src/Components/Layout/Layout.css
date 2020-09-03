@@ -53,6 +53,10 @@
   border-top-left-radius: 100%;
 }
 
+.store-btn:focus {
+  outline: none;
+}
+
 .login-btn {
   position: absolute;
   right: 0px;

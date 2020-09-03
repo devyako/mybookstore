@@ -6,12 +6,13 @@ import TypingComponent from "../../UI/Typing/Typing";
 import Navigation from "../../UI/Navigation";
 import SignUp from "../SignUp";
 import About from "../About";
+import { Link as Scroll } from "react-scroll";
 
 class Layout extends React.Component {
   state = {
     showLogin: false,
     showSignUp: false,
-    showAbout: false
+    showAbout: false,
   };
 
   backdropOff = () => {
@@ -52,18 +53,17 @@ class Layout extends React.Component {
           <button onClick={() => this.setState({ showSignUp: true })}>
             Sign Up
           </button>
-            
         </div>
 
         <div className="girl">
           <img className="vert-move" src={Girl} />
         </div>
 
-        <div className="store-btn-div">
-          <a href="#books">
+        <Scroll to="books" smooth={true} duration={1000} className="link">
+          <div className="store-btn-div">
             <button className="store-btn">BOOK STORE</button>
-          </a>
-        </div>
+          </div>
+        </Scroll>
       </div>
     );
   }
