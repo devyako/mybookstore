@@ -38,19 +38,14 @@
   cursor: pointer;
   color: #a02828;
   transition: 0.6s ease;
-
   font-family: "Raleway", sans-serif;
 }
 
 .store-btn:hover {
   background-color: white;
   color: #b91212;
-  border: 15px solid white;
+  border: 20px solid #ffd662;
   transition: 0.6s ease;
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-top-right-radius: 100%;
-  border-top-left-radius: 100%;
 }
 
 .store-btn:focus {
