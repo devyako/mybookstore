@@ -44,7 +44,7 @@
 .store-btn:hover {
   background-color: white;
   color: #b91212;
-  border: 20px solid #ffd662;
+  border: 9px solid #ffd662;
   transition: 0.6s ease;
 }
 
